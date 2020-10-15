@@ -1,0 +1,15 @@
+let message = "Coding is great";
+let studentCount = 0;
+console.log("Bài 4:");
+console.log("a.");
+message = "Coding might not be easy, but still great";
+console.log(message);
+console.log("b.");
+studentCount = 16;
+console.log(studentCount);
+console.log("c.");
+message = message.toLowerCase();
+console.log(message);
+console.log("d.");
+studentCount ++;
+console.log(studentCount);
