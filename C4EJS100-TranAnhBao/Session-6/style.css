@@ -1,0 +1,24 @@
+.demo-css {
+    color: red;
+    text-decoration: underline;
+}
+
+#only {
+    color: blue;
+    text-decoration: underline;
+}
+
+#flex-box-demo {
+    background-color: gray;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-items {
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
