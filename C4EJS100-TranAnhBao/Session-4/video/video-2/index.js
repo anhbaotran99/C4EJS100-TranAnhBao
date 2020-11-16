@@ -14,6 +14,8 @@ console.log(movie['title']);
 console.log(movie['year']);
 console.log(movie['rate']);
 
+// console.log(movie.review);
+
 // 2
 let property = prompt('What you want to know?');
 if(property == 'title') alert(movie.title);

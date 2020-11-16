@@ -44,8 +44,8 @@ console.log("Bài 3:");
 
 {
     console.log("e.");
-    let n = prompt("Enter n");
-    let c = prompt("Enter c");
+    let n = Number(prompt("Enter n"));
+    let c = Number(prompt("Enter c"));
     for(let i=c; i<n; i+=3)
     {
         console.log(i);
@@ -55,9 +55,9 @@ console.log("Bài 3:");
 // Câu f
 {
     console.log("f.");
-    let n = prompt("Enter n");
-    let c = prompt("Enter c");
-    let s = prompt("Enter s");
+    let n = Number(prompt("Enter n"));
+    let c = Number(prompt("Enter c"));
+    let s = Number(prompt("Enter s"));
     for(let i=c; i<n; i+=s)
     {
         console.log(i);

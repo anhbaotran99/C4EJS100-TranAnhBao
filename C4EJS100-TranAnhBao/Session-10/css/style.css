@@ -1,0 +1,16 @@
+#flex-box {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    height: 600px;
+}
+
+.flex-items {
+    background-color: lightgreen;
+    width: 100px;
+    /* height: 100px; */
+    margin: 10px;
+}   

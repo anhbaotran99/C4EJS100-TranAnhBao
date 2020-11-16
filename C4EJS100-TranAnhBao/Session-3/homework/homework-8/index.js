@@ -5,7 +5,8 @@ console.log(...array);
 
 // 8.2
 console.log('\n');
-let max = Math.max.apply(null, array);
+//let max = Math.max.apply(null, array);
+let max = Math.max(...array);
 console.log(`Now my biggest sheep has size ${max}, let 's shave it`);
 
 // 8.3
@@ -24,7 +25,8 @@ for(let i = 0; i < array.length; i++)
     array[i] += 50;
 }
 console.log(...array);
-max = Math.max.apply(null, array);
+// max = Math.max.apply(null, array);
+max = Math.max(...array);
 console.log('\n');
 console.log(`Now my biggest sheep has size ${max}, let 's shave it`);
 array[array.indexOf(max)] = 8;
@@ -61,7 +63,8 @@ for(let i = 0; i < array.length; i++)
     array[i] += 50;
 }
 console.log(...array);
-max = Math.max.apply(null, array);
+// max = Math.max.apply(null, array);
+max = Math.max(...array);
 console.log('\n');
 console.log(`Now my biggest sheep has size ${max}, let 's shave it`);
 array[array.indexOf(max)] = 8;

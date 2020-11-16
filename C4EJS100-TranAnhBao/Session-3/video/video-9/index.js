@@ -10,9 +10,13 @@ while(true)
     answer = Number(prompt("Enter your choice"));
     if(answer && (answer == 1 || answer == 2 || answer == 3 || answer == 4))
     {
-        if(answer == 3) alert("Bravo, you are correct");
+        if(answer == 3) 
+        {
+            alert("Bravo, you are correct");
+            break;
+        }
         else alert("Good luck next time");
-        break;
+        //break;
     }
     else 
     {

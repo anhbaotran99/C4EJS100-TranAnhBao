@@ -10,7 +10,7 @@
 //     console.log(response.data);
 // });
 
-// // Get all data sorted by name in ascending order
+// Get all data sorted by name in ascending order
 // axios.get('https://sheetdb.io/api/v1/0bw1giza56c1j?sort_by=Brand&sort_order=asc')
 // .then( response => {
 //     console.log(response.data);
