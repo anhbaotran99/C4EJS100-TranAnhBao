@@ -31,12 +31,12 @@
                     </a>
                 </li>
                 <li class="header-item">
-                    <a href="" class="header-item-link header-login">
+                    <a class="header-item-link header-login" onclick="document.getElementById('login').style.display='block'">
                         Đăng nhập
                     </a>
                 </li>
                 <li class="header-item">
-                    <a href="" class="header-item-link header-signup">
+                    <a class="header-item-link header-signup" onclick="document.getElementById('signup').style.display='block'">
                         Đăng ký
                     </a>
                 </li>
@@ -45,29 +45,38 @@
 
         <!-- Banner -->
         <div class="banner">
+            <!-- Images -->
             <div class="slides fade">
-                <img class="banner-images" src="images/banner/banner-1.jpg" alt="Banner-1" style="width: 50%">
+                <img class="banner-images" src="images/banner/banner-1.jpg" alt="Banner-1" style="width: 60%">
             </div>
             <div class="slides fade">
-                <img class="banner-images" src="images/banner/banner-2.jpg" alt="Banner-2" style="width: 50%">
+                <img class="banner-images" src="images/banner/banner-2.jpg" alt="Banner-2" style="width: 60%">
             </div>
             <div class="slides fade">
-                <img class="banner-images" src="images/banner/banner-3.jpg" alt="Banner-3" style="width: 50%">
+                <img class="banner-images" src="images/banner/banner-3.jpg" alt="Banner-3" style="width: 60%">
             </div>
             <div class="slides fade">    
-                <img class="banner-images" src="images/banner/banner-4.jpg" alt="Banner-4" style="width: 50%">
+                <img class="banner-images" src="images/banner/banner-4.jpg" alt="Banner-4" style="width: 60%">
             </div>
             <div class="slides fade">    
-                <img class="banner-images" src="images/banner/banner-5.jpg" alt="Banner-4" style="width: 50%">
+                <img class="banner-images" src="images/banner/banner-5.jpg" alt="Banner-4" style="width: 60%">
             </div>
-            <div class="slides-dot">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+
+        <!-- Dots -->
+        <div class="slides-dot" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
 
         <!-- Phần thân -->
         <div class="container" style="background-color: #f5f5f5;">
@@ -81,16 +90,18 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
-                                    <a href="#" class="category-item__link">Thiết bị điện tử</a>
+                                    <a id="all" class="category-item__link">Tất cả sản phẩm</a>
+                                <li class="category-item category-item">
+                                    <a id="thietBiDienTu" class="category-item__link">Thiết bị điện tử</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Đồ tiêu dùng</a>
+                                    <a id="sach" class="category-item__link">Sách</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Thời trang</a>
+                                    <a id="doTieuDung" class="category-item__link">Đồ tiêu dùng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item__link">Sách</a>
+                                    <a id="thoiTrang" class="category-item__link">Thời trang</a>
                                 </li>
                             </ul>
                         </nav>
@@ -207,7 +218,7 @@
                                 <span class="footer-item_member">Trần Anh Bảo</span>
                             </li>
                             <li class="footer-item">
-                                <span class="footer-item_member">Nguyễn Quốc Hải</span>
+                                <span class="footer-item_member">Trịnh Quốc Hải</span>
                             </li>
                             <li class="footer-item">
                                 <span class="footer-item_member">Đào Trọng Hiệp</span>
@@ -216,7 +227,7 @@
                                 <span class="footer-item_member">Nguyễn Tiến Lâm</span>
                             </li>
                             <li class="footer-item">
-                                <span class="footer-item_member">Ngô Văn Quý</span>
+                                <span class="footer-item_member">Ngô Đức Quý</span>
                             </li>
                         </ul>
                     </div>
@@ -226,47 +237,52 @@
     </div>
 
     <!-- Modal -->
-    <!-- <div class="modal">
-        <div class="modal-overlay">
-
-        </div>
-
-        <div class="modal-body">
-            <div class="register">
-                <div class="register-header">
-                    <h1 class="register-heading">Đăng ký</h1>
-                    <p class="register-text">Vui lòng điền đầy đủ thông tin dưới đây để tạo tài khoản</p>
-                </div>
-                <div class="register-body">
-                    <div class="register-input">
-                        <input type="text" class="register-firstName" placeholder="Họ">
-                        <input type="text" class="register-lastName" placeholder="Tên">
-                        <br>
-                        <input type="text" class="register-email" placeholder="Email">
-                        <br>
-                        <input type="text" class="register-password" placeholder="Mật khẩu">
-                        <br>
-                        <input type="text" class="register-cfpassword" placeholder="Xác nhận mật khẩu">
-                        <br>
-                    </div>
-                    <div class="register-confirm">
-                        <input type="checkbox" class="register-input"> Tôi đồng ý với các
-                        <a href="">Điều khoản dịch vụ </a>&
-                        <a href="">Chính sách bảo mật</a>
-                        <br>
-                        <button class="btn btn-signup">Đăng ký</button>
-                        <br>
-                        Bạn đã có tài khoản?
-                        <a href="">Đăng nhập ở đây</a>
-                    </div>
-                     
-                </div>
-
+    <!-- Login -->
+    <div id="login" class="modal">
+        <form action="/action_page.php" method="POST" class="modal-content">
+            <div class="login-container">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">x</span>
+                <h2>Đăng nhập</h2>
+                <input class="login-username" type="text" placeholder="Tên đăng nhập" name="username" required><br><br>
+                <input class="login-password" type="password" placeholder="Mật khẩu" name="password" required><br><br>
+                <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Thoát</button>
+                <button type="submit" class="loginbtn">Đăng nhập</button>
+                <div class="login-footer">
+                    <p>Bạn chưa là thành viên? <a href="#">Đăng ký</a></p>
+                    <p><a href="#">Quên mật khẩu/Tên đăng nhập</a></p>
+                </div>    
             </div>
-        </div>
-    </div> -->
+        </form>
+    </div>
+
+    <!-- Signup -->
+    <div id="signup" class="modal">
+        <form action="/action_page/php" class="modal-content">
+            <div class="signup-container">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close">x</span>
+                <h2>Đăng ký</h2>
+                <p style="font-size: 2rem;">Vui lòng điền đầy đủ các thông tin sau</p>
+                <input type="text" class="signup-firstName" placeholder="Họ" name="firstname" required>
+                <input type="text" class="signup-lastName" placeholder="Tên" name="lastname" required><br><br>
+                <input type="text" class="signup-email" placeholder="Email" name="email" required><br><br>
+                <input type="password" class="signup-password" placeholder="Mật khẩu" name="password" required><br><br>
+                <input type="password" class="signup-cfpassword" placeholder="Xác nhận mật khẩu" name="cfpassword" required><br><br>
+                <div class="signup-footer">
+                    <p>
+                        <input type="checkbox" class="signup-agree"> Tôi chấp nhận với tất cả <a href="#">Điều khoản dịch vụ</a> & <a href="">Chính sách bảo mật</a>
+                    </p>
+                    <button type="submit" class="signupbtn">Đăng ký</button>
+                    <p>Bạn đã có tài khoản? <a href="" >Đăng nhập ở đây</a></p>
+                </div>
+                
+            </div>
+        </form>
+    </div>
 
 
+
+
+    <script src="js/index.js"></script>
     <script src="js/data.js"></script>
     <script src="js/components.js"></script>
 </body>
