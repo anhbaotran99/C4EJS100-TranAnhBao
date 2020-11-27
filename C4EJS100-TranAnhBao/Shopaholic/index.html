@@ -14,7 +14,60 @@
     <div class="home_app">
         <!-- Header -->
         <header class="header">
-            <ul class="header-items">
+            <div class="grid">
+                <!-- Header navbar -->
+                <nav class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-item header-navbar-item--separate">Kênh Người Bán</li>
+                        <li class="header-navbar-item header-navbar-item--separate">Tải ứng dụng</li>
+                        <li class="header-navbar-item">
+                            <span class="header-navbar-title--no-pointer">Kết nối</span>
+                            <a href="" class="header-navbar-icon-link">
+                                <i class="header-navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="header-navbar-icon-link">
+                                <i class="header-navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-item">
+                            <a href="" class="header-navbar-item-link">
+                                <i class="header-navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header-navbar-item header-navbar-item--strong header-navbar-item--separate" onclick="document.getElementById('signup').style.display='block'">Đăng ký</li>
+                        <li class="header-navbar-item header-navbar-item--strong" onclick="document.getElementById('login').style.display='block'">Đăng nhập</li>
+                    </ul>
+                </nav>
+
+                <!-- Header with search -->
+                <div class="header-with-search">
+                    <div class="header-logo">
+                        <a href="">
+                            <img class="header-logo-img" src="images/header/logo.jpg" alt="Logo">
+                        </a>
+                        
+                    </div>
+
+                    <div class="header-search">
+                        <input type="text" class="header-search-input" placeholder="Nhập để tìm kiếm">
+                        <button class="header-search-btn">
+                            <i class="header-search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header-cart">
+                        <i class="header-cart-icon fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- <ul class="header-items">
                 <li class="header-item">
                     <a href="" class="header-item-link logo">Shopaholic</a>
                 </li>
@@ -40,7 +93,7 @@
                         Đăng ký
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </header>
 
         <!-- Banner -->
@@ -63,8 +116,8 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
         </div>
         <br>
 
@@ -285,5 +338,6 @@
     <script src="js/index.js"></script>
     <script src="js/data.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 </html>

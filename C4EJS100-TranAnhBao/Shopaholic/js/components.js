@@ -20,6 +20,9 @@ function showProducts(image, name, price, sold, brand, place)
                 <span class="product-item_brand">${brand}</span>
                 <span class="product-item_place">${place}</span>
             </div>
+            <div class="product-add">
+                <button class="product-add-btn">Thêm vào giỏ hàng</button>
+            </div>
             </a>
         </div>
     `
