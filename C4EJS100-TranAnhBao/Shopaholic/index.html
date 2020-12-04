@@ -60,7 +60,11 @@
                     </div>
 
                     <div class="header-cart">
-                        <i class="header-cart-icon fas fa-shopping-cart"></i>
+                        <i class="header-cart-icon fas fa-shopping-cart" onclick="document.getElementById('cart').style.display='block'"></i>
+                    </div>
+                    
+                    <div class="header-admin">
+                        <i class="header-admin-icon far fa-user" onclick="document.getElementById('admin').style.display='block'"></i>
                     </div>
                 </div>
 
@@ -294,7 +298,7 @@
     <div id="login" class="modal">
         <form action="/action_page.php" method="POST" class="modal-content">
             <div class="login-container">
-                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">x</span>
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close"><i class="fas fa-times"></i></span>
                 <h2>Đăng nhập</h2>
                 <input class="login-username" type="text" placeholder="Tên đăng nhập" name="username" required><br><br>
                 <input class="login-password" type="password" placeholder="Mật khẩu" name="password" required><br><br>
@@ -312,7 +316,7 @@
     <div id="signup" class="modal">
         <form action="/action_page/php" class="modal-content">
             <div class="signup-container">
-                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close">x</span>
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close"><i class="fas fa-times"></i></span>
                 <h2>Đăng ký</h2>
                 <p style="font-size: 2rem;">Vui lòng điền đầy đủ các thông tin sau</p>
                 <input type="text" class="signup-firstName" placeholder="Họ" name="firstname" required>
@@ -332,11 +336,83 @@
         </form>
     </div>
 
+    <!-- Admin -->
+    <div id="admin" class="modal">
+        <div class="modal-admin-content">
+            <div class="admin-container">
+                <span onclick="document.getElementById('admin').style.display='none'" class="close-admin" title="Close"><i class="fas fa-times"></i></span>
+                <input type="text" placeholder="Enter id" id="new_id">
+                <input type="text" placeholder="Enter category" id="new_category">
+                <input type="text" placeholder="Enter name" id="new_name">
+                <input type="text" placeholder="Enter brand" id="new_brand">
+                <input type="text" placeholder="Enter price" id="new_price">
+                <input type="text" placeholder="Enter image" id="new_image">
+                <input type="text" placeholder="Enter place" id="new_place">
+                <input type="text" placeholder="Enter sold" id="new_sold">
+                <button id="add_btn">Add</button>
+                <button id="clear_btn">Clear</button>
+                <table id="table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Place</th>
+                        <th>Sold</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody id="body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div id="cart" class="modal">
+        <div class="modal-cart-content">
+            <div class="modal-cart-container">
+                <span onclick="document.getElementById('cart').style.display='none'" class="close-cart" title="Close"><i class="fas fa-times"></i></span>
+                <div class="modal-cart-header">
+                    <h5 class="cart-title">Giỏ hàng</h5>
+                </div>
+                <div class="modal-cart-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số lượng</span>
+                    </div>
+                    <div class="cart-items">
+                        <!-- <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="./images/products/ThietBiDienTu/iphone11.jpg" width="100" height="100">
+                                <span class="cart-item-title">Iphone 11</span>
+                            </div>
+                            <span class="cart-price cart-column">25000000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Tổng cộng:</strong>
+                        <span class="cart-total-price">0VNĐ</span>
+                    </div>
+                </div>
+                <div class="modal-cart-footer">
+                    <button type="button" class="btn btn-secondary close-footer" onclick="document.getElementById('cart').style.display='none'">Đóng</button>
+                    <button id="checkOut" type="button" class="btn btn-primary order">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-    <script src="js/index.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/components.js"></script>
     <script src="js/controller.js"></script>
 </body>

@@ -104,10 +104,23 @@
     text-align: center;
 }
 
+.header-cart:hover {
+    cursor: pointer;
+}
+
 .header-cart-icon {
     color: var(--white-color);
     font-size: 2.6rem;
     margin-top: 3px;
+}
+
+.header-admin:hover {
+    cursor: pointer;
+}
+
+.header-admin-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
 }
 
 .header-search-input {
@@ -422,6 +435,16 @@
     border-radius: 5px;
 }
 
+.modal-admin-content {
+    background-color: var(--white-color);
+    margin: 5px auto;
+    width: 80%;
+    height: auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+
 /* Đăng nhập */
 .login-container{
     margin: auto;
@@ -519,10 +542,13 @@
     text-decoration: none;
 }
 
-/* ::placeholder {
-    font-size: 1.2rem;
-    padding-left: 0.5rem;
-} */
+/* Admin */
+.admin-container {
+    margin: auto;
+    /* padding-top: 10%; */
+    /* font-size: 2rem; */
+    position: relative;
+}
 
 .close {
     position: absolute;
@@ -532,9 +558,214 @@
     font-weight: bold;
     color: var(--black-color);
 }
+
+.close-admin,
+.close-cart {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--black-color);
+}
   
 .close:hover,
-.close:focus {
-    color: #f44336;
+.close:focus,
+.close-admin:hover,
+.close-admin:focus,
+.close-cart:hover,
+.close-cart:focus {
+    /* color: #f44336; */
+    color: var(--primary-color);
     cursor: pointer;
+}
+
+/* Admin */
+table{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td{
+    border: 1px solid;
+    background-color: var(--white-color);
+}
+th, td{
+    padding: 5px;
+}
+
+.modal-cart-container {
+    position: relative;
+}
+
+/* Cart */
+.modal-cart-content {
+    background-color: var(--white-color);
+    /* margin: 5px auto;
+    width: 50%;
+    height: 80%;
+    border: 1px solid #888;
+    border-radius: 5px; */
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.modal-cart-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 1rem;
+}
+
+.cart-title {
+    font-size: 1.5rem;
+}
+
+.modal-cart-body {
+    padding: 1rem;
+}
+
+.modal-cart-footer {
+    display: flex;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+}
+
+.modal-cart-footer>:not(:first-child) {
+    margin-left: .25rem;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: all .2s ease-in-out;
+}
+
+.btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+  
+.btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
+
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+  
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+  
+.cart-row {
+    display: flex;
+}
+  
+.cart-item {
+    width: 45%;
+}
+  
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+  
+.cart-quantity {
+    width: 35%;
+}
+  
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+  
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+  
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+  
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+  
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+  
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+  
+.cart-row:last-child .cart-column {
+    border: none;
+}
+  
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+  
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+  
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
 }
