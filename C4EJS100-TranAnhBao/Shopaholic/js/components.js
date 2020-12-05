@@ -109,6 +109,106 @@ showThoiTrang.addEventListener('click', () => {
 
 
 // Admin
+// const table_body = document.getElementById('body');
+// const new_id = document.getElementById('new_id');
+// const new_category = document.getElementById('new_category');
+// const new_name = document.getElementById('new_name');
+// const new_brand = document.getElementById('new_brand');
+// const new_price = document.getElementById('new_price');
+// const new_image = document.getElementById('new_image');
+// const new_place = document.getElementById('new_place');
+// const new_sold = document.getElementById('new_sold');
+// const add_btn = document.getElementById('add_btn');
+// const clear_btn = document.getElementById('clear_btn');
+
+
+// let update_num = 0;
+// let update_state = false;
+// console.log(update_state);
+// console.log(table_body);
+
+// function update_table() {
+
+//     table_body.innerHTML = '';
+
+//     for (let data of products) {
+//         table_body.insertAdjacentHTML('beforeend', `<tr><td>${data.id}</td><td>${data.category}</td><td>${data.name}</td><td>${data.brand}</td><td>${data.price}</td><td><img src="${data.image}"></td><td>${data.place}</td><td>${data.sold}</td><td><button class="remove_btn">X</button><button class="update_btn">U</button></td></tr>`);
+//     };
+
+//     const remove_btns = document.getElementsByClassName('remove_btn');
+//     const update_btns = document.getElementsByClassName('update_btn');
+
+//     for (let i = 0; i < remove_btns.length; i++) {
+//         remove_btns[i].addEventListener('click', () => {
+//             products.splice(i, 1);
+//             update_table();
+//             showProductsHome();
+//         });
+//     };
+    
+//     for (let i = 0; i < update_btns.length; i++) {
+//         update_btns[i].addEventListener('click', () => {
+//             update_state = true;
+//             update_num = i;
+//             new_id.value = products[i].id;
+//             new_category.value = products[i].category;
+//             new_name.value = products[i].name;
+//             new_brand.value = products[i].brand;
+//             new_price.value = products[i].price;
+//             new_image.value = products[i].image;
+//             new_place.value = products[i].place;
+//             new_sold.value = products[i].sold;
+//         });
+//     };
+// };
+
+// update_table();
+// console.log(update_state);
+
+// add_btn.addEventListener('click', () => {
+//     if (new_id.value == '' || new_category.value == '' || new_name.value == ''|| new_brand.value == '' || new_price.value == '' || new_image.value == '' || new_place.value == '' || new_sold.value == ''  ) {
+//         alert('dont leave stuff blank')
+//     } else if (update_state) {
+//         products[update_num] = { new_id: new_id.value, new_category: new_category.value, new_name: new_name.value, new_brand: new_brand.value, new_price: new_price.value, new_image: new_image.value, new_image: new_place,new_place:new_place.value,new_sold:new_sold.value };
+//         update_state = false;
+        
+//         update_table();
+//         new_id.value = '';
+//         new_category.value = '';
+//         new_name.value = '';
+//         new_brand.value ='';
+//         new_price.value = '';
+//         new_image.value = '';
+//         new_place.value = '';
+//         new_sold.value = '';
+//     } else {
+//         products.push({ new_id: new_id.value, new_category: new_category.value, new_name: new_name.value, new_brand: new_brand.value, new_price: new_price.value, new_image: new_image.value, new_image: new_place,new_place:new_place.value,new_sold:new_sold.value });
+        
+//         update_table();
+//         new_id.value = '';
+//         new_category.value = '';
+//         new_name.value = '';
+//         new_brand.value ='';
+//         new_price.value = '';
+//         new_image.value = '';
+//         new_place.value = '';
+//         new_sold.value = '';
+//     };
+// });
+// clear_btn.addEventListener('click', () => {
+//         new_id.value = '';
+//         new_category.value = '';
+//         new_name.value = '';
+//         new_brand.value ='';
+//         new_price.value = '';
+//         new_image.value = '';
+//         new_place.value = '';
+//         new_sold.value = '';
+//     update_state = false;
+// })
+
+
+// Admin
 const table_body = document.getElementById('body');
 const new_id = document.getElementById('new_id');
 const new_category = document.getElementById('new_category');
@@ -132,7 +232,7 @@ function update_table() {
     table_body.innerHTML = '';
 
     for (let data of products) {
-        table_body.insertAdjacentHTML('beforeend', `<tr><td>${data.id}</td><td>${data.category}</td><td>${data.name}</td><td>${data.brand}</td><td>${data.price}</td><td><img src="${data.image}"></td><td>${data.place}</td><td>${data.sold}</td><td><button class="remove_btn">X</button><button class="update_btn">U</button></td></tr>`);
+        table_body.insertAdjacentHTML('beforeend', `<tr><td>${data.id}</td><td>${data.category}</td><td class="admin-name">${data.name}</td><td>${data.brand}</td><td>${data.price}</td><td><img src="${data.image}"></td><td>${data.place}</td><td>${data.sold}</td><td class="admin-remove"><button class="remove_btn">X</button><button class="update_btn">U</button></td></tr>`);
     };
 
     const remove_btns = document.getElementsByClassName('remove_btn');
@@ -169,10 +269,11 @@ add_btn.addEventListener('click', () => {
     if (new_id.value == '' || new_category.value == '' || new_name.value == ''|| new_brand.value == '' || new_price.value == '' || new_image.value == '' || new_place.value == '' || new_sold.value == ''  ) {
         alert('dont leave stuff blank')
     } else if (update_state) {
-        products[update_num] = { new_id: new_id.value, new_category: new_category.value, new_name: new_name.value, new_brand: new_brand.value, new_price: new_price.value, new_image: new_image.value, new_image: new_place,new_place:new_place.value,new_sold:new_sold.value };
+        products[update_num] = { id: new_id.value, category: new_category.value, name: new_name.value, brand: new_brand.value, price: new_price.value, image: new_image.value, place:new_place.value, sold:new_sold.value };
         update_state = false;
         
         update_table();
+        showProductsHome();
         new_id.value = '';
         new_category.value = '';
         new_name.value = '';
@@ -182,9 +283,10 @@ add_btn.addEventListener('click', () => {
         new_place.value = '';
         new_sold.value = '';
     } else {
-        products.push({ new_id: new_id.value, new_category: new_category.value, new_name: new_name.value, new_brand: new_brand.value, new_price: new_price.value, new_image: new_image.value, new_image: new_place,new_place:new_place.value,new_sold:new_sold.value });
+        products.push({id: new_id.value, category: new_category.value, name: new_name.value, brand: new_brand.value, price: new_price.value, image: new_image.value, place:new_place.value, sold:new_sold.value });
         
         update_table();
+        showProductsHome();
         new_id.value = '';
         new_category.value = '';
         new_name.value = '';

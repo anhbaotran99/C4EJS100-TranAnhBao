@@ -114,6 +114,10 @@
     margin-top: 3px;
 }
 
+.header-cart-icon:hover {
+    color: rgba(255,255,255,0.7);
+}
+
 .header-admin:hover {
     cursor: pointer;
 }
@@ -121,6 +125,10 @@
 .header-admin-icon {
     font-size: 2.6rem;
     color: var(--white-color);
+}
+
+.header-admin-icon:hover {
+    color: rgba(255,255,255,0.7);
 }
 
 .header-search-input {
@@ -171,38 +179,6 @@
 .slides {
     display: none;
 }
-
-/* .prev {
-    cursor: pointer;
-    position: absolute;
-    top: 33%;
-    left: 21%;
-    width: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 33%;
-    right: 21%;
-    width: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-} */
 
 .dot {
     /* cursor: pointer; */
@@ -433,6 +409,7 @@
     height: 80%;
     border: 1px solid #888;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .modal-admin-content {
@@ -464,7 +441,14 @@
 .login-username, .login-password {
     margin: 0 10%;
     width: 80%;
+    height: 40px;
     margin-bottom: 2%;
+    border-radius: 2px;
+    border: 1px solid;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding-left: 10px;
+    border-radius: 3px;
 }
 
 .cancelbtn {
@@ -473,12 +457,16 @@
     margin-right: 5%;
     cursor: pointer;
     padding: 10px 18px;
+    border-radius: 5px;
+    border: 1px solid;
 }
 
 .loginbtn {
-    /* background-color: var(--primary-color); */
+    background-color: cornflowerblue;
     cursor: pointer;
     padding: 10px 18px;
+    border-radius: 5px;
+    border: 1px solid;
 }
 
 .login-footer {
@@ -515,15 +503,27 @@
     width: 40%;
     margin-left: 9%;
     margin-top: 5%;
+    border-radius: 2px;
+    border: 1px solid;
+    padding-left: 10px;
+    height: 30px;
 }
 
 .signup-lastName {
     width: 40%;
+    border-radius: 2px;
+    border: 1px solid;
+    padding-left: 10px;
+    height: 30px;
 }
 
 .signup-email, .signup-password, .signup-cfpassword {
     width: 81.1%;
     margin-left: 9%;
+    border-radius: 2px;
+    border: 1px solid;
+    padding-left: 10px;
+    height: 30px;
 }
 
 .signup-agree {
@@ -536,6 +536,9 @@
     margin-top: 3%;
     margin-left: 39%;
     margin-bottom: 3%;
+    background-color: cornflowerblue;
+    border-radius: 3px;
+    border: 1px solid;
 }
 
 .signup-footer a {
@@ -548,6 +551,7 @@
     /* padding-top: 10%; */
     /* font-size: 2rem; */
     position: relative;
+    padding: 20px;
 }
 
 .close {
@@ -584,6 +588,7 @@
 table{
     border-collapse: collapse;
     margin-top: 20px;
+    width: 100%;
 }
 table, th, td{
     border: 1px solid;
@@ -593,9 +598,63 @@ th, td{
     padding: 5px;
 }
 
+td {
+    text-align: center;
+    padding: 20px;
+}
+
+.admin-control input {
+    padding: 5px 10px;
+    width: 120px;
+    margin-right: 5px;
+}
+
+.admin-control button {
+    width: 50px;
+    height: 25px;
+}
+.admin-control .add_btn {
+    background-color: #337AB7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.admin-control .add_btn:hover {
+    cursor: pointer;
+}
+
+.admin-control .clear_btn {
+    background-color: #D9534F;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.admin-control .clear_btn:hover {
+    cursor: pointer;
+}
+
+.admin-name {
+    text-align: left;
+}
+
 .modal-cart-container {
     position: relative;
 }
+
+#table img {
+    width: 100px;
+}
+
+.admin-remove {
+   text-align: center;
+}
+
+.remove_btn {
+    margin-right: 10px;
+}
+
 
 /* Cart */
 .modal-cart-content {
