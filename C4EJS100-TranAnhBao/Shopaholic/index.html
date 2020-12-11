@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="fonts/fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -14,9 +16,9 @@
     <div class="home_app">
         <!-- Header -->
         <header class="header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- Header navbar -->
-                <nav class="header-navbar">
+                <nav class="header-navbar hide-on-mobile-tablet">
                     <ul class="header-navbar-list">
                         <li class="header-navbar-item header-navbar-item--separate">Kênh Người Bán</li>
                         <li class="header-navbar-item header-navbar-item--separate">Tải ứng dụng</li>
@@ -45,14 +47,14 @@
 
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header-logo">
+                    <div class="header-logo hide-on-tablet">
                         <a href="">
                             <img class="header-logo-img" src="images/header/logo.jpg" alt="Logo">
                         </a>
                         
                     </div>
 
-                    <div class="header-search">
+                    <div class="header-search hide-on-mobile">
                         <input type="text" class="header-search-input" placeholder="Nhập để tìm kiếm">
                         <button class="header-search-btn">
                             <i class="header-search-btn-icon fas fa-search"></i>
@@ -63,7 +65,7 @@
                         <i class="header-cart-icon fas fa-shopping-cart" onclick="document.getElementById('cart').style.display='block'"></i>
                     </div>
                     
-                    <div class="header-admin">
+                    <div class="header-admin hide-on-mobile-tablet">
                         <i class="header-admin-icon far fa-user" onclick="document.getElementById('admin').style.display='block'"></i>
                     </div>
                 </div>
@@ -101,7 +103,7 @@
         </header>
 
         <!-- Banner -->
-        <div class="banner">
+        <div class="banner hide-on-mobile-tablet">
             <!-- Images -->
             <div class="slides fade">
                 <img class="banner-images" src="images/banner/banner-1.jpg" alt="Banner-1" style="width: 60%">
@@ -118,15 +120,11 @@
             <div class="slides fade">    
                 <img class="banner-images" src="images/banner/banner-5.jpg" alt="Banner-4" style="width: 60%">
             </div>
-
-            <!-- Next and previous buttons -->
-            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
         </div>
         <br>
 
         <!-- Dots -->
-        <div class="slides-dot" style="text-align:center">
+        <div class="slides-dot hide-on-mobile-tablet" style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -137,9 +135,9 @@
 
         <!-- Phần thân -->
         <div class="container" style="background-color: #f5f5f5;">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category_heading">
                                 <i class="category_heading-icon fas fa-list"></i>
@@ -164,11 +162,11 @@
                         </nav>
                     </div>
                     
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                         <div class="product">
-                            <div id="product_items" class="grid__row">
+                            <div id="product_items" class="row sm-gutter">
                                 <!-- Product item -->
-                                <!-- <div class="grid__column-2-4">
+                                <!-- <div class="col l-2-4">
                                     <a class="product-item" href=#>
                                         <div class="product-item_img" style="background-image: url(https://www.viendongmobile.com/vnt_upload/product/07_2020/Untitled-1.png);"></div>
                                         <h4 class="product-item_name">Iphone 12 Pro Max</h4>
@@ -202,9 +200,9 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2-4">
                         <h3 class="footer_heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -214,7 +212,7 @@
                                 <a href="" class="footer-item_link">Hướng dẫn mua hàng</a>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4">
                         <h3 class="footer_heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -228,7 +226,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4">
                         <h3 class="footer_heading">Danh mục sản phẩm </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -245,7 +243,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4">
                         <h3 class="footer_heading">Theo dõi chúng tôi</h3> 
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -268,7 +266,7 @@
                             </li>
                         </ul> 
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4">
                         <h3 class="footer_heading">Đội ngũ phát triển</h3>
                         <ul class="footer-list">
                             <li class="footer-item">

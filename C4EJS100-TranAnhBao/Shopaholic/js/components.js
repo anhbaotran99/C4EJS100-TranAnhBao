@@ -5,7 +5,7 @@ function showProducts(image, name, price, sold, brand, place)
 {
     product_items.insertAdjacentHTML('beforeEnd', 
     `       
-        <div class="grid__column-2-4">
+        <div class="col l-2-4 m-4 c-6">
             <a class="product-item" href="#">
             <div class="product-item_img" style="background-image: url(${image})"></div>
             <h4 class="product-item_name">${name}</h4>
