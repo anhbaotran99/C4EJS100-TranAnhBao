@@ -1,0 +1,33 @@
+.container {
+    width: 500px;
+    height: 150px;
+    background-color: silver;
+}
+
+.header {
+    width: 500px;
+    background-color: blue;
+    text-align: center;
+}
+
+.body {
+    text-align: center;
+}
+
+.input {
+    outline: none;
+}
+
+.btn-submit {
+    height: 22px;
+    background-color: #337AB7;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+}
+

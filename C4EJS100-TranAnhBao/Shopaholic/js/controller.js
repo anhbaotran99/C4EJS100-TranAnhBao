@@ -7,7 +7,6 @@ for (let i = 0; i < remove_cart.length; i++) {
         button_remove.parentElement.parentElement.remove();
         updateCart();
     })
-    
 }
 
 // Cập nhật giỏ hàng 
